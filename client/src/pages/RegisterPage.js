@@ -28,20 +28,7 @@ class RegisterPage extends Component {
         this.showHide = this.showHide.bind(this);
         this.passwordStrength = this.passwordStrength.bind(this);
       }
-    // state = {
-    //     data : {},
-    //     username : '',
-    //     email: '',
-    //     password: '',
-    //     phone: 0,
-    //     type: 'input',
-    //     score: 'null',
-    //     redirectLogin : false,
-    //     showPassword : true
-    // }
-
-    // toggleSwitch = this.toggleSwitch.bind(this);
-
+    
     onChangeUsername = (e) => {
         this.setState({
             username : e.target.value
@@ -128,11 +115,6 @@ class RegisterPage extends Component {
                 <div className='d-flex justify-content-center'>
                     <form className='box'>
                      <div className='p-5'>
-                     {/* <label className="password">Password
-                        <input type={this.state.type} className="password__input" onChange={this.passwordStrength}/>
-                        <span className="password__show" onClick={this.showHide}>{this.state.type === 'input' ? 'Hide' : 'Show'}</span>
-                        <span className="password__strength" data-score={this.state.score} />
-                        </label> */}
                     <h1 style={{textAlign:"center"}}>Register!</h1>
                         <input type='text'
                          ref='username'
@@ -182,50 +164,6 @@ class RegisterPage extends Component {
     }
 }
 
-// class RegisterPage extends Component{
-//     constructor(props){
-//       super(props);
-//       this.state = {
-//         type: 'input',
-//         score: 'null'
-//       }
-//       this.showHide = this.showHide.bind(this);
-//       this.passwordStrength = this.passwordStrength.bind(this);
-//     }
-    
-//     showHide(e){
-//       e.preventDefault();
-//       e.stopPropagation();
-//       this.setState({
-//         type: this.state.type === 'input' ? 'password' : 'input'
-//       })  
-//     }
-    
-//     passwordStrength(e){
-//       if(e.target.value === ''){
-//         this.setState({
-//           score: 'null'
-//         })
-//       }
-//       else{
-//         var pw = zxcvbn(e.target.value);
-//         this.setState({
-//           score: pw.score
-//         });      
-//       }
-  
-//     }
-    
-//     render(){
-//       return(
-//         <label className="password">Password
-//         <input type={this.state.type} className="password__input" onChange={this.passwordStrength}/>
-//         <span className="password__show" onClick={this.showHide}>{this.state.type === 'input' ? 'Hide' : 'Show'}</span>
-//         <span className="password__strength" data-score={this.state.score} />
-//         </label>
-//       )
-//     }
-//   }
 const mapStatetoProps = ({ auth }) => {
     return{
         username : auth.username
