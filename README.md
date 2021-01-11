@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 You can run with git clone first, Second you npm install after that the run server first with nodemon server then go to cd client with npm start 
 
-In here so many I use for make some fitured.
+In here so many I use for make some features.
 
 1. Mern(mongoDB, express, react, node.js).
 
